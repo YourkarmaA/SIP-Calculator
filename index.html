@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SIP Calculator</h1>
+        <div class="input-section">
+            <label for="monthly-investment">Monthly Investment Amount (₹500 - ₹300,000):</label>
+            <input type="range" id="monthly-investment" min="500" max="300000" step="500" value="500">
+            <span id="monthly-investment-value">₹500</span>
+        </div>
+        <div class="input-section">
+            <label for="investment-duration">Investment Duration (1 - 50 years):</label>
+            <input type="range" id="investment-duration" min="1" max="50" value="5">
+            <span id="investment-duration-value">5 years</span>
+        </div>
+        <div class="input-section">
+            <label for="annual-interest-rate">Annual Interest Rate (1% - 40%):</label>
+            <input type="range" id="annual-interest-rate" min="1" max="40" step="0.01" value="12">
+            <span id="annual-interest-rate-value">12%</span>
+        </div>
+        <button id="calculate-button">Calculate</button>
+        <div id="result" class="hidden">
+            <h2>Investment Summary</h2>
+            <p>Total Invested Amount: <span id="total-invested-amount"></span></p>
+            <p>Estimated Returns: <span id="estimated-returns"></span></p>
+            <p>Total Value: <span id="total-value"></span></p>
+        </div>
+    </div>
+    <canvas id="chart" class="hidden"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
